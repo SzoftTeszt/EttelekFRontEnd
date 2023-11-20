@@ -1,0 +1,23 @@
+<!-- {{adatok|json}} -->
+<!-- {{adatok[0].nev}}
+{{adatok[0]['nev']}} -->
+<div class="row fw-bold my-4">
+
+      <div *ngFor="let oszlop of oszlopok" class="col">
+        {{oszlop}}
+    </div>
+
+    <div class="col">
+        Műveletek
+    </div>
+</div>
+
+<div *ngFor="let allat of adatok" class="row my-2">
+
+    <div *ngFor="let oszlop of oszlopok" class="col">
+        {{allat[oszlop]}}
+    </div>
+    <div class="col">
+        <button (click)="delEtel(allat)" type="button" class="btn btn-primary btn-sm">Törlés</button>
+    </div>
+</div>
